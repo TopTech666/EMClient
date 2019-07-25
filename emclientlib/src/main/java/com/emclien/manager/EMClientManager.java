@@ -8,7 +8,6 @@ import android.util.Log;
 
 import com.emclien.emclientlib.BuildConfig;
 import com.emclien.receiver.CallReceiver;
-import com.hyphenate.EMConferenceListener;
 import com.hyphenate.EMMessageListener;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMMessage;
@@ -195,9 +194,9 @@ public class EMClientManager {
 
         // 设置会议模式
         if (PreferenceManager.getInstance().isLargeConferenceMode()) {
-            EMClient.getInstance().conferenceManager().setConferenceMode(EMConferenceListener.ConferenceMode.LARGE);
+//            EMClient.getInstance().conferenceManager().setConferenceMode(EMConferenceListener.ConferenceMode.LARGE);
         } else {
-            EMClient.getInstance().conferenceManager().setConferenceMode(EMConferenceListener.ConferenceMode.NORMAL);
+//            EMClient.getInstance().conferenceManager().setConferenceMode(EMConferenceListener.ConferenceMode.NORMAL);
         }
     }
 
