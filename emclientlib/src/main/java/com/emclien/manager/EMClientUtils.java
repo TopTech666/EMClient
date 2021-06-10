@@ -846,8 +846,12 @@ public class EMClientUtils {
      * *************************************************/
     public static void updateCurrentUserNick(String nickname) {
         //此方法传入一个字符串String类型的参数，返回成功或失败的一个Boolean类型的返回值
-        EMClient.getInstance().updateCurrentUserNick(nickname);
-
+//        EMClient.getInstance().updateCurrentUserNick(nickname);
+        try {
+            EMClient.getInstance().pushManager().updatePushNickname(nickname);
+        } catch (HyphenateException e) {
+            e.printStackTrace();
+        }
     }
 
 

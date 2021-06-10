@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 // ** manually load all local groups and conversation
                 EMClient.getInstance().groupManager().loadAllGroups();
                 EMClient.getInstance().chatManager().loadAllConversations();
-                EMClient.getInstance().updateCurrentUserNick(name);
+                EMClientUtils.updateCurrentUserNick(name);
 //                // 获取华为 HMS 推送 token
 //                HMSPushHelper.getInstance().getHMSPushToken();
 //
